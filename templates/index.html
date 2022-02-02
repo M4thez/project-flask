@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://kit.fontawesome.com/5de878b2a7.js" crossorigin="anonymous"></script>
+  <title>Todo App</title>
+</head>
+
+<body>
+  <main>
+    <h1>Todo App</h1>
+    <form action="/add" method="post" autocomplete="off">
+      <div class="add-todo">
+        <label for="title">Note</label>
+        <input type="text" name="title" placeholder="Enter text...">
+        <button type="submit">Add</button>
+      </div>
+      <hr>
+    </form>
+    <div>
+      {% for todo in todoList %}
+      <div>
+        {% if todo.isCompleted == False %}
+        <p>| {{todo.title}}</p>
+        {% else %}
+        <p style="text-decoration: line-through;">{{todo.title}}</p>
+        {% endif %}
+        <div class="note-buttons">
+          <form action="/complete/{{todo.id}}">
+            <button type="submit">
+              {% if todo.isCompleted %}
+              Done <i class="fas fa-check-circle"></i>
+              {%else%}
+              Complete
+              {% endif %}
+            </button>
+          </form>
+          <form action="/delete/{{todo.id}}">
+            <button type="submit">Delete <i class="fas fa-trash-alt"></i></button>
+          </form>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </main>
+</body>
+
+</html>
