@@ -42,5 +42,11 @@ button:hover {
 }
 
 .note-paragraph {
-  max-width: 70%;
+  max-width: 40%;
+}
+
+@media screen and (max-width: 700px) {
+  .note-paragraph {
+    max-width: 70%;
+  }
 }
