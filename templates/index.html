@@ -24,11 +24,13 @@
     <div>
       {% for todo in todoList %}
       <div>
-        {% if todo.isCompleted == False %}
-        <p>| {{todo.title}}</p>
-        {% else %}
-        <p style="text-decoration: line-through;">{{todo.title}}</p>
-        {% endif %}
+        <div class="note-paragraph">
+          {% if todo.isCompleted == False %}
+          <p>| {{todo.title}}</p>
+          {% else %}
+          <p style="text-decoration: line-through;">| {{todo.title}}</p>
+          {% endif %}
+        </div>
         <div class="note-buttons">
           <form action="/complete/{{todo.id}}">
             <button type="submit">

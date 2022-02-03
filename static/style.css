@@ -2,15 +2,18 @@ html {
   font-size: 20px;
   font-family: 'Segoe UI', sans-serif;
 }
+
 main {
   margin: 2rem;
   padding: .5rem 2rem 2rem;
   border-radius: 16px;
   background-color: rgb(244, 244, 244);
 }
+
 h1 {
   text-align: center;
 }
+
 button {
   background-color: rgb(233, 236, 236);
   border-radius: 6px;
@@ -18,14 +21,26 @@ button {
   cursor: pointer;
   padding: .2rem .4rem;
 }
+
 button:hover {
   background-color: lightgray;
 }
-.add-todo{
+
+.add-todo {
   display: flex;
   column-gap: .8rem;
 }
+
+.add-todo input {
+  min-width: 20%;
+  padding: .4rem .6rem;
+}
+
 .note-buttons {
   display: flex;
   column-gap: .6rem;
+}
+
+.note-paragraph {
+  max-width: 70%;
 }
