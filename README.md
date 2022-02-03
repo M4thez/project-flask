@@ -2,7 +2,9 @@
 
 ## App description
 
-Simple Todo application made in the Flask framework. App allows to add new notes, delete existing ones and mark them as complete. Notes are stored in SQLite database and are persistent across sessions.
+Simple Todo application made in the Flask framework. 
+
+App allows to add new notes, delete existing ones or mark them as complete. Notes are stored in SQLite database and are persistent across sessions.
 
 ## Usage
 
@@ -15,7 +17,7 @@ Application should now be running on
 localhost:5000
 ```
 
-To run without Docker, but with Python and pip type
+To run without Docker (but with Python and pip) type
 ```
 pip install -r req.txt
 ```
@@ -23,15 +25,19 @@ and then
 ```
 python app.py
 ```
-to run with debug mode on and application openly available on your network
+Application now runs with debug mode on and is openly available on your local network
 
-or
+To access it type
+```
+localhost:5000
+```
+
+Alternatively use (runs with debug mode off and only on your local machine)
 ```
 flask run
 ```
-to run with debug mode off and only on your local machine
 
-Application should now be running on
+To access it type
 ```
 localhost:5000
 ```
