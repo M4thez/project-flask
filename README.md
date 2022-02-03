@@ -8,7 +8,8 @@ App allows to add new notes, delete existing ones or mark them as complete. Note
 
 ## Usage
 
-To run with Docker type 
+### Docker
+To run with Docker type
 ```
 docker compose up
 ```
@@ -17,6 +18,7 @@ Application should now be running on
 localhost:5000
 ```
 
+### Python and pip
 To run without Docker (but with Python and pip) type
 ```
 pip install -r req.txt
@@ -27,15 +29,10 @@ python app.py
 ```
 Application now runs with debug mode on and is openly available on your local network
 
-To access it type
-```
-localhost:5000
-```
-
-Alternatively use (runs with debug mode off and only on your local machine)
-```
-flask run
-```
+>Alternatively use (runs with debug mode off and only on your local machine)
+>```
+>flask run
+>```
 
 To access it type
 ```
